@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:video_player/video_player.dart';
 import 'package:view_file_url_flutter/video_player_module/center_play_button.dart';
 import 'package:view_file_url_flutter/video_player_module/video_view.dart';
-import 'package:view_file_url_flutter/video_player_module/chewie_progress_colors.dart';
+import 'package:view_file_url_flutter/video_player_module/progress_colors.dart';
 import 'package:view_file_url_flutter/video_player_module/helpers/utils.dart';
 import 'package:view_file_url_flutter/video_player_module/material/material_progress_bar.dart';
 import 'package:view_file_url_flutter/video_player_module/material/models/option_item.dart';
@@ -544,7 +544,7 @@ class _MaterialControlsState extends State<MaterialControls>
           _startHideTimer();
         },
         colors: mediaController.materialProgressColors ??
-            ChewieProgressColors(
+            ProgressColors(
               playedColor: Theme.of(context).accentColor,
               handleColor: Theme.of(context).accentColor,
               bufferedColor: Theme.of(context).backgroundColor.withOpacity(0.5),

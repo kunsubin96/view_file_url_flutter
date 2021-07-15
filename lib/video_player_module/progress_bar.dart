@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
-import 'package:view_file_url_flutter/video_player_module/chewie_progress_colors.dart';
+import 'package:view_file_url_flutter/video_player_module/progress_colors.dart';
 
 class VideoProgressBar extends StatefulWidget {
   VideoProgressBar(
     this.controller, {
-    ChewieProgressColors? colors,
+    ProgressColors? colors,
     this.onDragEnd,
     this.onDragStart,
     this.onDragUpdate,
@@ -14,11 +14,11 @@ class VideoProgressBar extends StatefulWidget {
     required this.barHeight,
     required this.handleHeight,
     required this.drawShadow,
-  })  : colors = colors ?? ChewieProgressColors(),
+  })  : colors = colors ?? ProgressColors(),
         super(key: key);
 
   final VideoPlayerController controller;
-  final ChewieProgressColors colors;
+  final ProgressColors colors;
   final Function()? onDragStart;
   final Function()? onDragEnd;
   final Function()? onDragUpdate;
@@ -128,7 +128,7 @@ class _ProgressBarPainter extends CustomPainter {
   });
 
   VideoPlayerValue value;
-  ChewieProgressColors colors;
+  ProgressColors colors;
 
   final double barHeight;
   final double handleHeight;

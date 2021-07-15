@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:video_player/video_player.dart';
-import 'package:view_file_url_flutter/video_player_module/chewie_progress_colors.dart';
+import 'package:view_file_url_flutter/video_player_module/progress_colors.dart';
 import 'package:view_file_url_flutter/video_player_module/material/models/options_translation.dart';
 import 'package:view_file_url_flutter/video_player_module/models/subtitle_model.dart';
 import 'package:view_file_url_flutter/video_player_module/notifiers/player_notifier.dart';
@@ -264,8 +264,8 @@ class MediaController extends ChangeNotifier {
     Duration? startAt,
     bool? looping,
     bool? fullScreenByDefault,
-    ChewieProgressColors? cupertinoProgressColors,
-    ChewieProgressColors? materialProgressColors,
+    ProgressColors? cupertinoProgressColors,
+    ProgressColors? materialProgressColors,
     Widget? placeholder,
     Widget? overlay,
     bool? showControlsOnInitialize,
@@ -406,11 +406,11 @@ class MediaController extends ChangeNotifier {
 
   /// The colors to use for controls on iOS. By default, the iOS player uses
   /// colors sampled from the original iOS 11 designs.
-  final ChewieProgressColors? cupertinoProgressColors;
+  final ProgressColors? cupertinoProgressColors;
 
   /// The colors to use for the Material Progress Bar. By default, the Material
   /// player uses the colors from your Theme.
-  final ChewieProgressColors? materialProgressColors;
+  final ProgressColors? materialProgressColors;
 
   /// The placeholder is displayed underneath the Video before it is initialized
   /// or played.

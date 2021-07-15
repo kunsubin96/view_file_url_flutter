@@ -10,7 +10,7 @@ import 'package:video_player/video_player.dart';
 import 'package:view_file_url_flutter/video_player_module/animated_play_pause.dart';
 import 'package:view_file_url_flutter/video_player_module/center_play_button.dart';
 import 'package:view_file_url_flutter/video_player_module/video_view.dart';
-import 'package:view_file_url_flutter/video_player_module/chewie_progress_colors.dart';
+import 'package:view_file_url_flutter/video_player_module/progress_colors.dart';
 import 'package:view_file_url_flutter/video_player_module/cupertino/cupertino_progress_bar.dart';
 import 'package:view_file_url_flutter/video_player_module/helpers/utils.dart';
 import 'package:view_file_url_flutter/video_player_module/models/subtitle_model.dart';
@@ -613,7 +613,7 @@ class _CupertinoControlsState extends State<CupertinoControls>
             _startHideTimer();
           },
           colors: mediaController.cupertinoProgressColors ??
-              ChewieProgressColors(
+              ProgressColors(
                 playedColor: const Color.fromARGB(
                   120,
                   255,
