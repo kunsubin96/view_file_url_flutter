@@ -7,7 +7,8 @@ import 'package:http/http.dart' as http;
 
 class ReadPdfScreen extends StatefulWidget {
   final String urlPdf;
-  ReadPdfScreen({required this.urlPdf});
+  final String? title;
+  ReadPdfScreen({required this.urlPdf, this.title});
   @override
   _ReadPdfScreen createState() => _ReadPdfScreen();
 }
@@ -70,7 +71,7 @@ class _ReadPdfScreen extends State<ReadPdfScreen> {
           centerTitle: false,
           titleSpacing: 0,
           title: Text(
-            "",
+            widget.title??"",
             style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
